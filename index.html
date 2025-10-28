@@ -16,16 +16,16 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Configuração do Tailwind para adicionar suas cores e fonte Poppins
+    
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'primaria': '#0d47a1', // Azul escuro
-            'secundaria': '#1976d2', // Azul médio
+            'primaria': '#0d47a1', 
+            'secundaria': '#1976d2', 
           },
           fontFamily: {
-            'sans': ['Poppins', 'sans-serif'], // Definindo Poppins como a fonte principal
+            'sans': ['Poppins', 'sans-serif'], 
           }
         }
       }
@@ -33,12 +33,12 @@
   </script>
 
   <style type="text/tailwindcss">
-    /* Recria a borda pontilhada do seu CSS original */
+  
     .job-border {
-      border-bottom: 1px dashed #D1D5DB; /* equivalente a border-dashed + border-gray-300 */
+      border-bottom: 1px dashed #D1D5DB; 
     }
 
-    /* Esconde o texto de expandir/recolher no desktop (breakpoint 'md') */
+  
     @media (min-width: 767px) {
       .accordion-text {
         display: none;
@@ -261,18 +261,18 @@
 
         accordions.forEach(button => {
           button.addEventListener('click', () => {
-            // Só executa a lógica de accordion em telas mobile (breakpoint 'md' do Tailwind: 767px)
+            
             if (window.innerWidth < 767) {
               const content = button.nextElementSibling;
               const textSpan = button.querySelector('.accordion-text');
               
               if (content.style.maxHeight === '0px') {
-                // Abre o accordion
+                
                 content.style.maxHeight = content.scrollHeight + 'px';
                 content.setAttribute('aria-hidden', 'false');
                 if (textSpan) textSpan.textContent = 'recolher';
               } else {
-                // Fecha o accordion
+                
                 content.style.maxHeight = '0px';
                 content.setAttribute('aria-hidden', 'true');
                 if (textSpan) textSpan.textContent = 'expandir';
@@ -281,33 +281,33 @@
           });
         });
 
-        // Lógica para redimensionamento de janela
+        
         window.addEventListener('resize', () => {
           const allContent = document.querySelectorAll('.accordion-content');
           const allTextSpans = document.querySelectorAll('.accordion-text');
 
           if (window.innerWidth >= 767) {
-            // Se a tela for desktop, força todos os accordions a ficarem abertos
+            
             allContent.forEach(content => {
-              content.style.maxHeight = null; // Remove a altura fixa
+              content.style.maxHeight = null; 
               content.setAttribute('aria-hidden', 'false');
             });
-            allTextSpans.forEach(span => span.classList.add('hidden')); // Esconde "expandir/recolher"
+            allTextSpans.forEach(span => span.classList.add('hidden')); 
           } else {
-            // Se a tela for mobile, garante que o estado (aberto/fechado) seja mantido ou resetado
+            
             allContent.forEach(content => {
                 if (content.style.maxHeight !== '0px' && content.style.maxHeight) {
-                    // Se já estiver aberto, recalcula o height (caso a orientação mude)
+                    
                     content.style.maxHeight = content.scrollHeight + 'px';
                 } else {
-                    // Se não, garante que esteja fechado
+                    
                     content.style.maxHeight = '0px';
                     content.setAttribute('aria-hidden', 'true');
                 }
             });
             allTextSpans.forEach(span => {
-                span.classList.remove('hidden'); // Mostra "expandir/recolher"
-                // Ajusta o texto para 'expandir' se o conteúdo estiver fechado
+                span.classList.remove('hidden'); 
+                
                 if (span.closest('.accordion-toggle').nextElementSibling.style.maxHeight === '0px') {
                     span.textContent = 'expandir';
                 } else {
@@ -317,16 +317,16 @@
           }
         });
 
-        // Configuração inicial no carregamento da página
+        
         if (window.innerWidth < 767) {
-          // Em mobile, começa com todos fechados
+          
           document.querySelectorAll('.accordion-content').forEach(content => {
             content.style.maxHeight = '0px';
             content.setAttribute('aria-hidden', 'true');
           });
           document.querySelectorAll('.accordion-text').forEach(span => span.textContent = 'expandir');
         } else {
-          // Em desktop, começa com todos abertos
+          
            document.querySelectorAll('.accordion-content').forEach(content => {
                 content.style.maxHeight = null;
                 content.setAttribute('aria-hidden', 'false');
