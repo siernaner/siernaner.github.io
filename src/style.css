@@ -20,6 +20,7 @@
 
         .container {
             max-width: 1000px;
+            margin-top: 0 !important;
             margin: 20px auto;
             background-color: var(--cor-branca);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
