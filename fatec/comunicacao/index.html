@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindTech - Inovação em Bem-Estar Emocional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Cores da marca - Azul e Verde */
+        .brand-blue {
+            color: #1E3A8A;
+        }
+        
+        .brand-green {
+            color: #059669;
+        }
+        
+        .bg-brand-blue {
+            background-color: #1E3A8A;
+        }
+        
+        .bg-brand-green {
+            background-color: #059669;
+        }
+        
+        .border-brand-blue {
+            border-color: #1E3A8A;
+        }
+        
+        .border-brand-green {
+            border-color: #059669;
+        }
+        
+        .hover-bg-brand-blue:hover {
+            background-color: #1E40AF;
+        }
+        
+        .hover-bg-brand-green:hover {
+            background-color: #047857;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #1E3A8A, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #1E3A8A, #059669);
+        }
+        
+        /* Animações de scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 mr-2">
+                    <img src="[LINK PARA LOGO MT 40X40]" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">Mind<span class="brand-blue">Tech</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Home</a>
+                <a href="#sobre" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sobre</a>
+                <a href="#produtos" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Produtos</a>
+                <a href="#parcerias" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Parcerias</a>
+                <a href="#contato" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contato</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Home</a>
+                <a href="#sobre" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sobre</a>
+                <a href="#produtos" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Produtos</a>
+                <a href="#parcerias" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Parcerias</a>
+                <a href="#contato" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="pt-24 pb-16 bg-gradient text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforme sua casa em um <span class="text-yellow-300">refúgio emocional</span></h1>
+                    <p class="text-xl mb-8">A Casa das Emoções da MindTech adapta seu ambiente para melhorar seu bem-estar emocional através de tecnologia avançada.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#produtos" class="bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">Conhecer Produto</a>
+                        <a href="#contato" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Fale Conosco</a>
+                    </div>
+                </div>
+                
+                <div class="mt-16 max-w-4xl mx-auto fade-in">
+                    <div class="bg-white bg-opacity-20 rounded-xl p-8 flex items-center justify-center h-64">
+                        <p class="text-white text-lg">Imagem ilustrativa da Casa das Emoções</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Sobre a <span class="text-gradient">MindTech</span></h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="fade-in">
+                            <h3 class="text-xl font-semibold mb-4 brand-blue">Nossa Missão</h3>
+                            <p class="text-gray-600 mb-6">A MindTech é uma empresa referência em inovação biomédica, inteligência artificial aplicada à saúde e automação residencial inteligente. Estamos na vanguarda de um mercado em expansão, com soluções integradas que transformam a vida das pessoas.</p>
+                            <p class="text-gray-600">Nossa missão é redefinir os padrões de bem-estar, segurança e conectividade através da tecnologia aplicada à saúde mental.</p>
+                        </div>
+                        
+                        <div class="fade-in">
+                            <h3 class="text-xl font-semibold mb-4 brand-green">Nossa Visão</h3>
+                            <p class="text-gray-600 mb-6">Ser a empresa líder mundial em soluções tecnológicas para saúde mental e bem-estar emocional, criando ambientes que se adaptam às necessidades emocionais das pessoas.</p>
+                            <p class="text-gray-600">Acreditamos que a tecnologia deve servir para melhorar a qualidade de vida, e não apenas para aumentar a produtividade.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16 fade-in">
+                        <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Nossos Diferenciais</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-blue">
+                                <h4 class="font-semibold text-lg mb-2 brand-blue">Tecnologia Biomédica</h4>
+                                <p class="text-gray-600">Sensores avançados para monitoramento de sinais vitais e ondas cerebrais.</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-green">
+                                <h4 class="font-semibold text-lg mb-2 brand-green">IA Adaptativa</h4>
+                                <p class="text-gray-600">Sistema que aprende com seus padrões emocionais e se adapta automaticamente.</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-blue">
+                                <h4 class="font-semibold text-lg mb-2 brand-blue">Segurança e Privacidade</h4>
+                                <p class="text-gray-600">Proteção de dados biométricos com criptografia ponta a ponta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos <span class="text-gradient">Produtos</span></h2>
+                
+                <div class="max-w-5xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12 fade-in">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-8">
+                                <h3 class="text-2xl font-bold mb-4 brand-blue">Casa das Emoções</h3>
+                                <p class="text-gray-600 mb-6">Sistema residencial inteligente que monitora e adapta o ambiente para influenciar positivamente o humor dos moradores.</p>
+                                
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Monitoramento biológico em tempo real</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Iluminação adaptativa e aromaterapia</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Sistema de áudio personalizado</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-600">Mecanismo anti-dependência integrado</span>
+                                    </li>
+                                </ul>
+                                
+                                <a href="#contato" class="inline-block bg-brand-blue text-white font-semibold py-2 px-6 rounded-lg hover-bg-brand-blue transition-colors">Solicitar Demonstração</a>
+                            </div>
+                            
+                            <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                                <div class="text-center">
+                                    <p class="text-gray-500 mb-4">Imagem da Casa das Emoções</p>
+                                    <div class="w-full h-48 bg-gradient rounded-lg flex items-center justify-center text-white">
+                                        <span class="text-lg font-semibold">Casa das Emoções</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Componentes do Sistema</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">📱</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2 brand-blue">Pulseira Inteligente</h4>
+                            <p class="text-gray-600">Monitora hormônios e sinais vitais como batimentos cardíacos, pressão e temperatura.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">⌚</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2 brand-green">Relógio Inteligente</h4>
+                            <p class="text-gray-600">Coleta e envia informações vitais em tempo real para a central.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🧠</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2 brand-blue">Adesivo Neural</h4>
+                            <p class="text-gray-600">Capta ondas cerebrais para análise do estado emocional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="parcerias" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossas <span class="text-gradient">Parcerias</span></h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="fade-in">
+                        <p class="text-gray-600 text-center mb-8">A MindTech estabelece parcerias estratégicas com instituições de saúde, empresas de tecnologia e organizações de pesquisa para expandir o impacto positivo de nossas soluções.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+                        <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-32 fade-in">
+                            <p class="text-gray-500 text-center">Logo Parceiro 1</p>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-32 fade-in">
+                            <p class="text-gray-500 text-center">Logo Parceiro 2</p>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-32 fade-in">
+                            <p class="text-gray-500 text-center">Logo Parceiro 3</p>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-32 fade-in">
+                            <p class="text-gray-500 text-center">Logo Parceiro 4</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center fade-in">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Torne-se um Parceiro</h3>
+                        <p class="text-gray-600 mb-6">Interessado em colaborar conosco? Entre em contato para discutir oportunidades de parceria.</p>
+                        <a href="#contato" class="inline-block bg-brand-green text-white font-semibold py-2 px-6 rounded-lg hover-bg-brand-green transition-colors">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 bg-gradient text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Entre em <span class="text-yellow-300">Contato</span></h2>
+                
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm fade-in">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Nome Completo</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Seu nome" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">E-mail</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block mb-2 font-medium">Assunto</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-white" required>
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="produto">Informações sobre produtos</option>
+                                    <option value="parceria">Oportunidades de parceria</option>
+                                    <option value="suporte">Suporte técnico</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block mb-2 font-medium">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">Enviar Mensagem</button>
+                        </form>
+                        
+                        <div class="mt-8 pt-8 border-t border-white border-opacity-30">
+                            <h3 class="text-xl font-semibold mb-4">Outras Formas de Contato</h3>
+                            
+                            <div class="flex flex-col sm:flex-row justify-between">
+                                <div class="mb-4 sm:mb-0">
+                                    <p class="font-medium">E-mail</p>
+                                    <a href="mailto:contato@mindtech.com" class="hover:underline">contato@mindtech.com</a>
+                                </div>
+                                
+                                <div class="mb-4 sm:mb-0">
+                                    <p class="font-medium">Telefone</p>
+                                    <a href="tel:+5511999999999" class="hover:underline">(11) 99999-9999</a>
+                                </div>
+                                
+                                <div>
+                                    <p class="font-medium">Endereço</p>
+                                    <p>São Paulo, SP - Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 mr-2">
+                            <img src="[LINK PARA LOGO MT 32X32]" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <h2 class="text-xl font-bold">Mind<span class="brand-blue">Tech</span></h2>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Inovação em Bem-Estar Emocional</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 MindTech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission - Lógica alterada para não usar mailto:
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulação de envio de dados
+            
+            // Reset do formulário após "envio"
+            this.reset();
+
+            // Mensagem de confirmação solicitada pelo usuário
+            alert('Mensagem enviada com sucesso! A MindTech agradece seu contato e responderá em breve.');
+        });
+
+        // Scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Highlight active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-gray-900');
+                link.classList.add('text-gray-600');
+                
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-600');
+                    link.classList.add('text-gray-900');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
