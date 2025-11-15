@@ -76,9 +76,9 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <div class="w-10 h-10 mr-2">
-                    <img src="[LINK PARA LOGO MT 40X40]" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
+                    <img src="src/logo40x40.png" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
                 </div>
-                <h1 class="text-xl font-bold text-gray-800">Mind<span class="brand-blue">Tech</span></h1>
+                <h1 class="text-xl font-bold text-gray-800">Mind<span class="brand-green">Tech</span></h1>
             </div>
             
             <nav class="hidden md:flex space-x-8">
@@ -119,9 +119,9 @@
                     </div>
                 </div>
                 
-                <div class="mt-16 max-w-4xl mx-auto fade-in">
-                    <div class="bg-white bg-opacity-20 rounded-xl p-8 flex items-center justify-center h-64">
-                        <p class="text-white text-lg">Imagem ilustrativa da Casa das Emoções</p>
+                <div class="mt-16 fade-in flex justify-center">
+                    <div class="bg-white bg-opacity-20 rounded-xl p-2 h-fit max-h-96 w-fit flex items-center justify-center">
+                        <img src="src/casaemocoes.jpg" alt="Casa das Emoções" class="max-h-64 rounded-md block">
                     </div>
                 </div>
             </div>
@@ -214,39 +214,39 @@
                             <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
                                 <div class="text-center">
                                     <p class="text-gray-500 mb-4">Imagem da Casa das Emoções</p>
-                                    <div class="w-full h-48 bg-gradient rounded-lg flex items-center justify-center text-white">
-                                        <span class="text-lg font-semibold">Casa das Emoções</span>
+                                    <div class="bg-gradient rounded-lg flex p-2 h-fit max-h-96 w-fit flex items-center justify-center">
+                                        <img src="src/casaemocoes.jpg" alt="Casa das Emoções 2" class="max-h-64 rounded-md block">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Componentes do Sistema</h3>
+                    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Alguns dos Componentes</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
                             <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-2xl">📱</span>
+                                <img src="src/ar80x80.png" alt="Aromatizador Natural" class="w-full h-full object-cover rounded-full">
                             </div>
-                            <h4 class="font-semibold text-lg mb-2 brand-blue">Pulseira Inteligente</h4>
-                            <p class="text-gray-600">Monitora hormônios e sinais vitais como batimentos cardíacos, pressão e temperatura.</p>
+                            <h4 class="font-semibold text-lg mb-2 brand-blue">Aromatizador Natural</h4>
+                            <p class="text-gray-600">Altera o ambiente com fragrâncias naturais para melhorar o bem-estar.</p>
                         </div>
                         
                         <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
                             <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                                <span class="text-2xl">⌚</span>
+                                <img src="src/relogio80x80.png" alt="Relógio Inteligente" class="w-full h-full object-cover rounded-full">
                             </div>
                             <h4 class="font-semibold text-lg mb-2 brand-green">Relógio Inteligente</h4>
-                            <p class="text-gray-600">Coleta e envia informações vitais em tempo real para a central.</p>
+                            <p class="text-gray-600">Coleta e envia informações vitais em tempo real para a central receptora.</p>
                         </div>
                         
                         <div class="bg-white rounded-lg shadow-md p-6 text-center fade-in">
                             <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-2xl">🧠</span>
+                                <img src="src/adesivo80x80.png" alt="Adesivo Neural" class="w-full h-full object-cover rounded-full">
                             </div>
                             <h4 class="font-semibold text-lg mb-2 brand-blue">Adesivo Neural</h4>
-                            <p class="text-gray-600">Capta ondas cerebrais para análise do estado emocional.</p>
+                            <p class="text-gray-600">Capta ondas cerebrais para análise do estado emocional feita pela central.</p>
                         </div>
                     </div>
                 </div>
@@ -310,10 +310,10 @@
                                 <label for="subject" class="block mb-2 font-medium">Assunto</label>
                                 <select id="subject" name="subject" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-white" required>
                                     <option value="" disabled selected>Selecione um assunto</option>
-                                    <option value="produto">Informações sobre produtos</option>
-                                    <option value="parceria">Oportunidades de parceria</option>
-                                    <option value="suporte">Suporte técnico</option>
-                                    <option value="outro">Outro</option>
+                                    <option value="produto" class="text-black">Informações sobre produtos</option>
+                                    <option value="parceria" class="text-black">Oportunidades de parceria</option>
+                                    <option value="suporte" class="text-black">Suporte técnico</option>
+                                    <option value="outro" class="text-black">Outro</option>
                                 </select>
                             </div>
                             
@@ -331,17 +331,17 @@
                             <div class="flex flex-col sm:flex-row justify-between">
                                 <div class="mb-4 sm:mb-0">
                                     <p class="font-medium">E-mail</p>
-                                    <a href="mailto:contato@mindtech.com" class="hover:underline">contato@mindtech.com</a>
+                                    <a href="mailto:contato@mindtech.com.br" class="hover:underline">contato@mindtech.com.br</a>
                                 </div>
                                 
                                 <div class="mb-4 sm:mb-0">
                                     <p class="font-medium">Telefone</p>
-                                    <a href="tel:+5511999999999" class="hover:underline">(11) 99999-9999</a>
+                                    <a href="tel:+5518999887777" class="hover:underline">(18) 99988-7777</a>
                                 </div>
                                 
                                 <div>
                                     <p class="font-medium">Endereço</p>
-                                    <p>São Paulo, SP - Brasil</p>
+                                    <p>Pompeia, SP - Brasil</p>
                                 </div>
                             </div>
                         </div>
@@ -357,9 +357,9 @@
                 <div class="mb-6 md:mb-0">
                     <div class="flex items-center">
                         <div class="w-8 h-8 mr-2">
-                            <img src="[LINK PARA LOGO MT 32X32]" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
+                            <img src="src/logo40x40.png" alt="Logo MindTech" class="w-full h-full object-cover rounded-full">
                         </div>
-                        <h2 class="text-xl font-bold">Mind<span class="brand-blue">Tech</span></h2>
+                        <h2 class="text-xl font-bold">Mind<span class="brand-green">Tech</span></h2>
                     </div>
                     <p class="mt-2 text-gray-400 text-sm">Inovação em Bem-Estar Emocional</p>
                 </div>
