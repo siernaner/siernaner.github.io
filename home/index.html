@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Online - Renan Reis Lima</title>
+
+    <meta name="description" content="Portfólio de Renan Reis Lima | Desenvolvedor de Sistemas, cursando FATEC e ETEC, especializando em dados, análise, Python e IA. Confira projetos e currículos deste profissional em constante evolução.">
+    <meta name="keywords" content="Desenvolvedor, Programador, Portfólio, Fatec, Etec, Desenvolvimento de Sistemas, HTML, CSS, JavaScript, Bootstrap, Analista, Marketplace, E-commerce, Python, Dados">
+    <meta name="author" content="github: siernaner">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="src/favicon.ico">
+
+    <meta property="og:title" content="Portfólio | Desenvolvedor de Sistemas - Renan Reis Lima">
+    <meta property="og:description" content="Confira meus projetos de Desenvolvimento de Sistemas (FATEC/ETEC) em um portfólio moderno e minimalista.">
+    <meta property="og:url" content="siernaner.github.io">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfólio | Renan Reis Lima - Desenvolvedor">
+    <meta name="twitter:description" content="Veja projetos em Desenvolvimento de Sistemas e E-commerce.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Card do projeto */
+        .project-card {
+            background-color: #000;
+            color: #fff;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* Trigger (header clicável do accordion) */
+        .project-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        .project-trigger:hover {
+            background-color: #111827;
+        }
+
+        /* Indicador + que gira ao abrir */
+        .plus-indicator {
+            font-size: 1.75rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .plus-indicator.rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        /* Conteúdo colapsável */
+        .project-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .project-content ul {
+            color: #d1d5db; /* equivalente ao text-gray-200 */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-content ul li a,
+        .project-content ul li {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .project-content ul li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Sub-lista com borda lateral */
+        .sub-list {
+            padding-left: 1rem;
+            border-left: 1px solid #4b5563;
+            margin-left: 0.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .sub-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        .sub-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+
+<body class="min-vh-100">
+
+    <header class="container py-4 py-md-5 px-4 px-md-5">
+        <h1 class="fs-1 fw-semibold text-center mb-2">Meu Portfólio - Renan Reis Lima</h1>
+        <p class="fs-5 text-center text-secondary mb-0">
+            Desenvolvedor de Soluções para Pequenos Negócios
+        </p>
+        <small class="d-block text-center text-muted mt-2">
+            Para mais informações, visualize o currículo de sua preferência.
+        </small>
+    </header>
+
+    <main class="container px-4 pb-5" style="max-width: 56rem;">
+        <div class="d-flex flex-column gap-4">
+
+            <!-- Card: Currículos -->
+            <div class="project-card">
+                <div class="project-trigger">
+                    <h3 class="fs-4 fw-semibold mb-0" style="letter-spacing: 0.05em;">Currículo</h3>
+                    <span class="plus-indicator">+</span>
+                </div>
+                <div class="project-content">
+                    <div class="pt-2 px-4 pb-4">
+                        <ul class="d-flex flex-column gap-1">
+                            <li><a href="/home/src/Curriculo_Renan_Reis_Lima.pdf">Clique para Baixar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Projetos FATEC -->
+            <div class="project-card">
+                <div class="project-trigger">
+                    <h3 class="fs-4 fw-semibold mb-0" style="letter-spacing: 0.05em;">Projetos FATEC</h3>
+                    <span class="plus-indicator">+</span>
+                </div>
+                <div class="project-content">
+                    <div class="pt-2 px-4 pb-4">
+                        <ul class="d-flex flex-column gap-1">
+                            <li>
+                                <span class="sub-label">Em desenvolvimento</span>
+                                <ul class="sub-list mt-1 d-flex flex-column gap-1">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Projetos ETEC -->
+            <div class="project-card">
+                <div class="project-trigger">
+                    <h3 class="fs-4 fw-semibold mb-0" style="letter-spacing: 0.05em;">Projetos ETEC</h3>
+                    <span class="plus-indicator">+</span>
+                </div>
+                <div class="project-content">
+                    <div class="pt-2 px-4 pb-4">
+                        <ul class="d-flex flex-column gap-3">
+                            <li>
+                                <span class="sub-label">Em desenvolvimento</span>
+                                <ul class="sub-list mt-1 d-flex flex-column gap-1">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggers = document.querySelectorAll('.project-trigger');
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const content = trigger.nextElementSibling;
+                    const indicator = trigger.querySelector('.plus-indicator');
+
+                    indicator.classList.toggle('rotate-45');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
