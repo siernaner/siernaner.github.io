@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Integração PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resposta {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Conexão GitHub + PHP</h1>
+        <p>Clique no botão abaixo para buscar dados do servidor externo:</p>
+
+        <button id="btnChamada">Testar Conexão</button>
+
+        <div id="resposta">O resultado aparecerá aqui...</div>
+    </div>
+
+    <script>
+        const botao = document.getElementById('btnChamada');
+        const display = document.getElementById('resposta');
+
+        botao.addEventListener('click', () => {
+            display.innerText = "Conectando ao PHP...";
+            display.style.color = "blue";
+
+
+            const URL_API = "https://siernaner.pages.gd/api.php";
+
+            fetch(URL_API)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Erro na requisição (Verifique o CORS ou a URL)");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Exibe a mensagem que veio do PHP
+                    display.innerText = data.mensagem;
+                    display.style.color = "green";
+                })
+                .catch(error => {
+                    display.innerText = "Erro: " + error.message;
+                    display.style.color = "red";
+                    console.error("Detalhes do erro:", error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
