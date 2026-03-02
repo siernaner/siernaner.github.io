@@ -25,6 +25,10 @@
 
                 <button class="btn btn-primary w-100" onclick="calcular()">Calcular no PHP</button>
 
+                <div class="mt-4">
+                    <span id="statusBadge" class="badge d-none p-2 w-100">Aguardando...</span>
+                </div>
+
                 <div class="mt-4 alert alert-secondary text-center">
                     <strong>Resultado: </strong> <span id="res">-</span>
                 </div>
@@ -37,22 +41,47 @@
             const n1 = parseFloat(document.getElementById('n1').value);
             const n2 = parseFloat(document.getElementById('n2').value);
             const op = document.getElementById('op').value;
-            const resDisplay = document.getElementById('res');
+            const badge = document.getElementById('statusBadge');
+            const btn = document.querySelector('button');
 
-            resDisplay.innerText = "Processando...";
+            // Inicialização do Estado: Calculando (Aviso em Amarelo)
+            badge.innerText = "Calculando...";
+            badge.className = "badge p-2 w-100 d-block text-bg-warning";
+            btn.disabled = true; // Previne múltiplas requisições concorrentes
+
+            // Configuração do Timeout via AbortController (ex: 20 segundos para acordar o container)
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 20000);
 
             try {
-                const response = await fetch('https://backend-siernaner.onrender.com/calculadora.php', {
+                const response = await fetch('https://backend-siernaner.onrender.com/index.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ num1: n1, num2: n2, operacao: op })
+                    body: JSON.stringify({ num1: n1, num2: n2, operacao: op }),
+                    signal: controller.signal // Vincula o sinal de aborto à requisição
                 });
 
+                clearTimeout(timeoutId); // Cancela o timeout se houver resposta rápida
+
+                if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
                 const data = await response.json();
-                resDisplay.innerText = data.resultado;
+
+                // Estado: Sucesso (Verde)
+                badge.innerText = "Resultado: " + data.resultado;
+                badge.className = "badge p-2 w-100 d-block text-bg-success";
+
             } catch (error) {
-                resDisplay.innerText = "Erro na API";
-                console.error(error);
+                if (error.name === 'AbortError') {
+                    // Estado: Timeout/Cold Start (Azul - Info)
+                    badge.innerText = "Tempo esgotado (O servidor está acordando...)";
+                    badge.className = "badge p-2 w-100 d-block text-bg-info";
+                } else {
+                    // Estado: Erro de Lógica/Conexão (Vermelho)
+                    badge.innerText = "Erro: " + error.message;
+                    badge.className = "badge p-2 w-100 d-block text-bg-danger";
+                }
+            } finally {
+                btn.disabled = false; // Reabilita o botão após a finalização da Promise
             }
         }
     </script>
