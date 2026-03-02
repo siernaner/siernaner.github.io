@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora API - PHP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 card p-4 shadow">
+                <h3 class="text-center mb-4">Calculadora Remota</h3>
+
+                <input type="number" id="n1" class="form-control mb-2" placeholder="Número 1">
+                <select id="op" class="form-select mb-2">
+                    <option value="soma">Somar (+)</option>
+                    <option value="sub">Subtrair (-)</option>
+                    <option value="mult">Multiplicar (*)</option>
+                    <option value="div">Dividir (/)</option>
+                </select>
+                <input type="number" id="n2" class="form-control mb-3" placeholder="Número 2">
+
+                <button class="btn btn-primary w-100" onclick="calcular()">Calcular no PHP</button>
+
+                <div class="mt-4 alert alert-secondary text-center">
+                    <strong>Resultado: </strong> <span id="res">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function calcular() {
+            const n1 = parseFloat(document.getElementById('n1').value);
+            const n2 = parseFloat(document.getElementById('n2').value);
+            const op = document.getElementById('op').value;
+            const resDisplay = document.getElementById('res');
+
+            resDisplay.innerText = "Processando...";
+
+            try {
+                const response = await fetch('https://backend-siernaner.onrender.com/calculadora.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ num1: n1, num2: n2, operacao: op })
+                });
+
+                const data = await response.json();
+                resDisplay.innerText = data.resultado;
+            } catch (error) {
+                resDisplay.innerText = "Erro na API";
+                console.error(error);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
