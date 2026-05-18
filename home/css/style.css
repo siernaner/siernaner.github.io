@@ -1,0 +1,87 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Card do projeto */
+        .project-card {
+            background-color: #000;
+            color: #fff;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* Trigger (header clicável do accordion) */
+        .project-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        .project-trigger:hover {
+            background-color: #111827;
+        }
+
+        /* Indicador + que gira ao abrir */
+        .plus-indicator {
+            font-size: 1.75rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .plus-indicator.rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        /* Conteúdo colapsável */
+        .project-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .project-content ul {
+            color: #d1d5db; /* equivalente ao text-gray-200 */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-content ul li a,
+        .project-content ul li {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .project-content ul li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Sub-lista com borda lateral */
+        .sub-list {
+            padding-left: 1rem;
+            border-left: 1px solid #4b5563;
+            margin-left: 0.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .sub-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        .sub-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.05em;
+        }
